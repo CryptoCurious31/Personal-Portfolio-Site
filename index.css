@@ -1,0 +1,143 @@
+/* -------- Custom Font Link ------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* ------ Custom Css ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*::after,
+::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(to bottom, #44309B, #06D0D0);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    font-style: normal;
+    overflow-x: hidden;
+}
+
+
+/* ----------------- Navigation bar Starts ----------------- */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(4, 22, 79);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    width: 600px;
+    margin: 20px 0px;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+nav ul li .links {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+}
+
+.links::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: orange;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+
+.links:hover::after {
+    transform: scaleX(1);
+}
+
+/* ----------------- Navigation bar Ends --------------- */
+
+/* ----------------- Welcome Section Starts --------------- */
+
+.welcomeSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.welcomeSection .intro {
+    margin: 0 auto;
+}
+
+.welcomeSection .intro .mainHeading {
+    font-size: 45px;
+    font-weight: bolder;
+    color: azure;
+    margin: 0;
+}
+
+.welcomeSection .intro .smallText {
+    margin-top: -10px;
+    font-size: 20px;
+    color: red;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+.welcomeSection .image {
+    margin: 0 auto;
+}
+
+.welcomeSection .image .boyPng {
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+}
+
+/* ---------------------- Weclome Section Ends ------------------ */
+
+/* ---------------------- Work Section Starts ------------------ */
+.workSection {
+    text-align: center;
+    padding: 10rem 2rem;
+}
+
+.workSectionHeading {
+    margin: 0 auto 6rem auto;
+    max-width: 640px;
+    border-bottom: 0.2rem solid white;
+}
+
+@media (max-width: 28.75rem) {
+    .workSectionHeading {
+        font-size: 4rem;
+    }
+}
+/* ---------------------- Work Section Ends ------------------ */
